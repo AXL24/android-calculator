@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Conversion"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Category Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/spinner_background"
+        android:paddingHorizontal="16dp" />
+
+    <!-- From Unit -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="From"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp">
+
+        <EditText
+            android:id="@+id/input_value"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_background"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_gray"
+            android:hint="0"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/from_unit_spinner"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="16dp" />
+    </LinearLayout>
+
+    <!-- Swap Button -->
+    <ImageView
+        android:id="@+id/btn_swap"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="16dp"
+        android:src="@drawable/ic_swap"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <!-- To Unit -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/output_value"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_background"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/white"
+            android:text="0"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/to_unit_spinner"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="16dp" />
+    </LinearLayout>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:visibility="gone" />
+
+</LinearLayout>
